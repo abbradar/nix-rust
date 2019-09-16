@@ -652,7 +652,7 @@ impl UnixAddr {
         }
     }
 
-    fn sun_path(&self) -> &[u8] {
+    pub fn sun_path(&self) -> &[u8] {
         unsafe { slice::from_raw_parts(self.0.sun_path.as_ptr() as *const u8, self.1) }
     }
 
